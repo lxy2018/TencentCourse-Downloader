@@ -1,5 +1,5 @@
 # 腾讯课堂视频下载脚本
-业余小白腾讯课堂太难用了，且投屏效果太差。借鉴了 https://github.com/aiguoli/qcourse_scripts 做了这个视频下载脚本，改进了一下菜单选择逻辑和多线程下载+进度条，由于官方的token格式老是变化，改为了使用playwright登陆时，自动去课程表下第一个视频内获取当前token的pattern存到本地，添加了一些API的pydantic model。
+腾讯课堂太难用了，且投屏效果太差。业余小白借鉴了 https://github.com/aiguoli/qcourse_scripts 做了这个视频下载脚本，改进了一下菜单选择逻辑和多线程下载+进度条，由于官方的token格式老是变化，改为了使用playwright登陆时，自动去课程表下第一个视频内获取当前token的pattern存到本地，添加了一些API的pydantic model。
 
 ![Snipaste_01-28_08-13-39](https://user-images.githubusercontent.com/42557951/151505882-d9274ec7-510d-4673-a362-34e881012215.jpg)
 
@@ -12,7 +12,7 @@
 ## 使用方法
 0. cd到当前文件夹
 1. 手动pip下载全部缺少的依赖
-2. cmd执行安装playwright install msedge
+2. cmd执行安装playwright install msedge（msedgedriver版本问题，可在该地址下载最新版的驱动 https://msedgewebdriverstorage.z22.web.core.windows.net/）
 3. 修改Root Path或使用默认的Data文件夹作为默认下载文件夹
 4. 执行python main.py
 5. 弹出窗口扫码登陆，选择课程下载
