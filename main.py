@@ -191,7 +191,8 @@ class Course(object):
         # 获取课程全部信息
 
         url = f'https://ke.qq.com/cgi-bin/course/basic_info?cid={cid}'
-        course_data = CourseModel(**httpx.get(url).json())
+        headers = {"referer": f"https://ke.qq.com/course/{cid}"}
+        course_data = CourseModel(**httpx.get(url,headers=headers).json())
 
         return course_data
 
